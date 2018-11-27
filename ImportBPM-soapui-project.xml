@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="57a48e92-7e83-4a4d-b3af-d41487377e5b" activeEnvironment="Default" name="ImportBPM" resourceRoot="" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:WsdlInterface" id="59497444-38a2-4310-892d-b48410b4837f" wsaVersion="NONE" name="SubProcess_RecieveDataFromExtern_EP" type="wsdl" bindingName="{http://www.tibco.com/bs3.0/_GFiEUOmlEeiNa-ssr_CQIw/DataToBW}SubProcess_RecieveDataFromExtern_EP" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/admin/Downloads/ImportBPM.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="file:/C:/Users/admin/Downloads/ImportBPM.wsdl">
+      <con:part>
+        <con:url>file:/C:/Users/admin/Downloads/ImportBPM.wsdl</con:url>
+        <con:content><![CDATA[<wsdl:definitions name="DataToBW" targetNamespace="http://www.tibco.com/bs3.0/_GFiEUOmlEeiNa-ssr_CQIw/DataToBW" xmlns:tns="http://www.tibco.com/bs3.0/_GFiEUOmlEeiNa-ssr_CQIw/DataToBW" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns0="http://www.tibco.com/bs3.0/_GFiEUOmlEeiNa-ssr_CQIw" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <xs:schema targetNamespace="http://www.tibco.com/bs3.0/_GFiEUOmlEeiNa-ssr_CQIw" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:simpleType name="string">
+        <xs:restriction base="xs:string"/>
+      </xs:simpleType>
+      <xs:simpleType name="string_50">
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="50"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="SubProcess_RecieveDataFromExtern_ParameterIn_CorrelationID" type="ns0:string"/>
+      <xs:element name="SubProcess_RecieveDataFromExtern_ParameterOut_WF_CASE_ID" type="ns0:string_50"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="SubProcess_RecieveDataFromExtern_ReceiveTask_INPUT">
+    <wsdl:part name="ParameterIn_CorrelationID" element="ns0:SubProcess_RecieveDataFromExtern_ParameterIn_CorrelationID"/>
+  </wsdl:message>
+  <wsdl:message name="SubProcess_RecieveDataFromExtern_ReceiveTask_OUTPUT">
+    <wsdl:part name="ParameterOut_WF_CASE_ID" element="ns0:SubProcess_RecieveDataFromExtern_ParameterOut_WF_CASE_ID"/>
+  </wsdl:message>
+  <wsdl:portType name="SubProcess_RecieveDataFromExtern" ns1:FlowContainer="_ayfuAPIpEeiCsd_Wv-RtYQ" xmlns:ns1="http://www.tibco.com/bs3.2/extensions">
+    <wsdl:operation name="ReceiveTask">
+      <wsdl:input message="tns:SubProcess_RecieveDataFromExtern_ReceiveTask_INPUT" ns1:Event="_cvNSUPIpEeiCsd_Wv-RtYQ"/>
+      <wsdl:output message="tns:SubProcess_RecieveDataFromExtern_ReceiveTask_OUTPUT" ns1:Event="_cvNSUPIpEeiCsd_Wv-RtYQ"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SubProcess_RecieveDataFromExtern_EP" type="tns:SubProcess_RecieveDataFromExtern">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ReceiveTask">
+      <wsdl:documentation/>
+      <soap:operation style="document" soapAction="ReceiveTask"/>
+      <wsdl:input>
+        <soap:body use="literal" parts="ParameterIn_CorrelationID"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="ParameterOut_WF_CASE_ID"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DataToBW">
+    <wsdl:port name="SubProcess_RecieveDataFromExtern_EP" binding="tns:SubProcess_RecieveDataFromExtern_EP">
+      <soap:address location="http://0.0.0.0:15555/RecieveDataFromExtern"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content>
+        <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>http://0.0.0.0:15555/RecieveDataFromExtern</con:endpoint>
+    </con:endpoints>
+    <con:operation id="1d469fe4-4655-4432-897f-01641dc741fd" isOneWay="false" action="ReceiveTask" name="ReceiveTask" bindingOperationName="ReceiveTask" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="1feafc31-253a-4b7a-b924-b13aefa2b94d" name="Request 1" wssPasswordType="PasswordText" timeout="100000000">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://ssva90322:15555/RecieveDataFromExtern</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:_gf="http://www.tibco.com/bs3.0/_GFiEUOmlEeiNa-ssr_CQIw">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <_gf:SubProcess_RecieveDataFromExtern_ParameterIn_CorrelationID>12679727433427013</_gf:SubProcess_RecieveDataFromExtern_ParameterIn_CorrelationID>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:username>tibco-admin</con:username>
+          <con:password>secret</con:password>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>Global HTTP Settings</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="ReceiveTask"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+  </con:interface>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+</con:soapui-project>
