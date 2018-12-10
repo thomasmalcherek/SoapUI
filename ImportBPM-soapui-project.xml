@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="57a48e92-7e83-4a4d-b3af-d41487377e5b" activeEnvironment="Default" name="ImportBPM" resourceRoot="" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="57a48e92-7e83-4a4d-b3af-d41487377e5b" activeEnvironment="Default" name="ImportBPM" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
   <con:interface xsi:type="con:WsdlInterface" id="59497444-38a2-4310-892d-b48410b4837f" wsaVersion="NONE" name="SubProcess_RecieveDataFromExtern_EP" type="wsdl" bindingName="{http://www.tibco.com/bs3.0/_GFiEUOmlEeiNa-ssr_CQIw/DataToBW}SubProcess_RecieveDataFromExtern_EP" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/admin/Downloads/ImportBPM.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
@@ -69,7 +69,7 @@
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:_gf="http://www.tibco.com/bs3.0/_GFiEUOmlEeiNa-ssr_CQIw">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
-      <_gf:SubProcess_RecieveDataFromExtern_ParameterIn_CorrelationID>12679727433427013</_gf:SubProcess_RecieveDataFromExtern_ParameterIn_CorrelationID>\r
+      <_gf:SubProcess_RecieveDataFromExtern_ParameterIn_CorrelationID>9530896106967744</_gf:SubProcess_RecieveDataFromExtern_ParameterIn_CorrelationID>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:credentials>
@@ -90,4 +90,5 @@
   <con:wssContainer/>
   <con:oAuth2ProfileContainer/>
   <con:oAuth1ProfileContainer/>
+  <con:sensitiveInformation/>
 </con:soapui-project>

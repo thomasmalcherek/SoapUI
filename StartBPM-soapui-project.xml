@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="3cc13ecf-fa87-404b-bb96-a58e53fed6d5" activeEnvironment="Default" name="StartBPM" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:WsdlInterface" id="8c4029d6-fbb3-413d-840f-18de4c80d092" wsaVersion="NONE" name="DataToBWStartEvent_EP" type="wsdl" bindingName="{http://www.tibco.com/bs3.0/_GFiEUOmlEeiNa-ssr_CQIw/DataToBWStartEvent}DataToBWStartEvent_EP" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/admin/Downloads/ImportBPM.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="file:\C:\Users\admin\Downloads\ImportBPM.wsdl">
+      <con:part>
+        <con:url>file:\C:\Users\admin\Downloads\ImportBPM.wsdl</con:url>
+        <con:content><![CDATA[<wsdl:definitions name="DataToBWStartEvent" targetNamespace="http://www.tibco.com/bs3.0/_GFiEUOmlEeiNa-ssr_CQIw/DataToBWStartEvent" xmlns:ns1="http://www.tibco.com/bs3.0/_GFiEUOmlEeiNa-ssr_CQIw" xmlns:tns="http://www.tibco.com/bs3.0/_GFiEUOmlEeiNa-ssr_CQIw/DataToBWStartEvent" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns0="http://example.com/comtibcopoctest" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <xs:schema targetNamespace="http://www.tibco.com/bs3.0/_GFiEUOmlEeiNa-ssr_CQIw" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://example.com/comtibcopoctest"/>
+      <xs:simpleType name="string">
+        <xs:restriction base="xs:string"/>
+      </xs:simpleType>
+      <xs:simpleType name="string_50">
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="50"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="ProcessId" type="xs:string"/>
+      <xs:element name="SubProcess_RecieveDataFromExtern_ParameterIn_CorrelationID" type="ns1:string"/>
+      <xs:element name="SubProcess_RecieveDataFromExtern_ParameterOut_WF_CASE_ID" type="ns1:string_50"/>
+    </xs:schema>
+    <xs:schema targetNamespace="http://example.com/comtibcopoctest" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://www.tibco.com/bs3.0/_GFiEUOmlEeiNa-ssr_CQIw"/>
+      <xs:annotation>
+        <xs:documentation>
+          <ns0:DocumentationElement BOMORIGIN="/com.tibco.poc.test/Business Objects/comtibcopoctest.bom"/>
+        </xs:documentation>
+      </xs:annotation>
+      <xs:complexType name="pocDBRequest">
+        <xs:sequence>
+          <xs:element name="WFCaseID" form="unqualified">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="pocMetaData">
+        <xs:sequence>
+          <xs:element name="WFCaseID" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="AHVNummer" form="unqualified">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="partnerID" form="unqualified">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="dokumentenArt" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="kanton" form="unqualified">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="frist" form="unqualified" type="xs:dateTime" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="pocDBRequestElement" type="ns0:pocDBRequest"/>
+      <xs:element name="pocMetaDataElement" type="ns0:pocMetaData"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="DataToBWStartEvent_CatchMessageEvent_INPUT">
+    <wsdl:part name="Input_MetaData" element="ns0:pocMetaDataElement"/>
+  </wsdl:message>
+  <wsdl:message name="DataToBWStartEvent_CatchMessageEvent_OUTPUT">
+    <wsdl:part name="ProcessId" element="ns1:ProcessId"/>
+  </wsdl:message>
+  <wsdl:portType name="DataToBWStartEvent" ns2:FlowContainer="_0KkFMPiaEeiLOcx5GuQ9ow" xmlns:ns2="http://www.tibco.com/bs3.2/extensions">
+    <wsdl:operation name="CatchMessageEvent">
+      <wsdl:input message="tns:DataToBWStartEvent_CatchMessageEvent_INPUT" ns2:Event="_5S5Q8PiaEeiLOcx5GuQ9ow"/>
+      <wsdl:output message="tns:DataToBWStartEvent_CatchMessageEvent_OUTPUT" ns2:Event="_5S5Q8PiaEeiLOcx5GuQ9ow"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DataToBWStartEvent_EP" type="tns:DataToBWStartEvent">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="CatchMessageEvent">
+      <wsdl:documentation/>
+      <soap:operation style="document" soapAction="CatchMessageEvent"/>
+      <wsdl:input>
+        <soap:body use="literal" parts="Input_MetaData"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="ProcessId"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DataToBWStartEvent">
+    <wsdl:port name="DataToBWStartEvent_EP" binding="tns:DataToBWStartEvent_EP">
+      <soap:address location="http://0.0.0.0:15555/StartEventBPMProcess"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content>
+        <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>http://0.0.0.0:15555/StartEventBPMProcess</con:endpoint>
+    </con:endpoints>
+    <con:operation id="021c93c4-eea0-473d-86e2-bf0531e95c0c" isOneWay="false" action="CatchMessageEvent" name="CatchMessageEvent" bindingOperationName="CatchMessageEvent" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="42da5e6f-6062-4cc3-8856-aaa0df347c2a" name="Request 1" wssPasswordType="PasswordText">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://ssva90322:15555/StartEventBPMProcess</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:com="http://example.com/comtibcopoctest">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <com:pocMetaDataElement>\r
+         <!--Optional:-->\r
+         <WFCaseID>1</WFCaseID>\r
+         <AHVNummer>1-2-3-4</AHVNummer>\r
+         <partnerID>1-2-15</partnerID>\r
+         <!--Optional:-->\r
+         <dokumentenArt>1</dokumentenArt>\r
+         <kanton>DE</kanton>\r
+         <!--Optional:-->\r
+         \r
+      </com:pocMetaDataElement>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:username>tibco-admin</con:username>
+          <con:password>secret</con:password>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>Global HTTP Settings</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="CatchMessageEvent"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+  </con:interface>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+</con:soapui-project>
