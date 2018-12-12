@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="59c6cd57-6a41-46df-81d8-3796a662b4df" activeEnvironment="Default" name="saveDataCase" resourceRoot="" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="3d539c57-bb33-4eac-bad5-210fe1f5532c" activeEnvironment="Default" name="saveDataCase" resourceRoot="" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
-  <con:interface xsi:type="con:WsdlInterface" id="0cc9f12c-f93f-40b9-b5d4-ef61dea8b254" wsaVersion="NONE" name="SOAPServiceBinding" type="wsdl" bindingName="{http://com.tibco.poc.test.bw.saveDataCase}SOAPServiceBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/admin/Downloads/saveDataCase.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:interface xsi:type="con:WsdlInterface" id="dd42c7b4-7cd4-4f3c-b37c-785a6616d3c6" wsaVersion="NONE" name="SOAPServiceBinding" type="wsdl" bindingName="{http://com.tibco.poc.test.bw.saveDataCase}SOAPServiceBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/admin/Downloads/saveDataCase.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
     <con:definitionCache type="TEXT" rootPart="file:\C:\Users\admin\Downloads\saveDataCase.wsdl">
       <con:part>
@@ -15,6 +15,7 @@
             <xsd:element name="AHV-Nummer" type="xsd:string"/>
             <xsd:element name="Dokumenten-Art" type="xsd:string"/>
             <xsd:element name="Geschaeftsfall" type="xsd:string"/>
+            <xsd:element name="Anzahl_der_Dokumente" type="xsd:integer"/>
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
@@ -32,6 +33,7 @@
             <xsd:element name="AHV-Nummer" type="xsd:string"/>
             <xsd:element name="Dokumenten-Art" type="xsd:string"/>
             <xsd:element name="Geschaeftsfall" type="xsd:string"/>
+            <xsd:element name="Anzahl_der_Dokumente" type="xsd:integer"/>
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
@@ -56,6 +58,7 @@
             <xsd:element name="AHV-Nummer" type="xsd:string"/>
             <xsd:element name="Dokumenten-Art" type="xsd:string"/>
             <xsd:element name="Geschaeftsfall" type="xsd:string"/>
+            <xsd:element name="Anzahl_der_Dokumente" type="xsd:integer"/>
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
@@ -69,6 +72,7 @@
                   <xsd:element name="AHV-Nummer" type="xsd:string"/>
                   <xsd:element name="Dokumenten-Art" type="xsd:string"/>
                   <xsd:element name="Geschaeftsfall" type="xsd:string"/>
+                  <xsd:element name="Anzahl_der_Dokumente" type="xsd:integer"/>
                 </xsd:sequence>
               </xsd:complexType>
             </xsd:element>
@@ -179,9 +183,9 @@
     <con:endpoints>
       <con:endpoint>http://localhost:5555/saveDataCase</con:endpoint>
     </con:endpoints>
-    <con:operation id="2d7c37fa-993b-486c-87a0-da4273ea77a1" isOneWay="false" action="CreateCaseID" name="CreateCaseID" bindingOperationName="CreateCaseID" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+    <con:operation id="7ff9f5ac-0d3c-4124-aa20-c1f7490eeff6" isOneWay="false" action="CreateCaseID" name="CreateCaseID" bindingOperationName="CreateCaseID" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
       <con:settings/>
-      <con:call id="6cad3be8-55aa-465b-ba5b-617c22f3038b" name="Request 1">
+      <con:call id="8ba7fbe2-1ebd-41c4-b270-974c0924608f" name="Request 1">
         <con:settings/>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>http://localhost:5555/saveDataCase</con:endpoint>
@@ -192,21 +196,16 @@
          <AHV-Nummer>gero et</AHV-Nummer>\r
          <Dokumenten-Art>sonoras imperio</Dokumenten-Art>\r
          <Geschaeftsfall>quae divum incedo</Geschaeftsfall>\r
+         <Anzahl_der_Dokumente>100</Anzahl_der_Dokumente>\r
       </com:CreateCaseIDRequest>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
-        <con:credentials>
-          <con:authType>No Authorization</con:authType>
-        </con:credentials>
-        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:jmsPropertyConfig/>
         <con:wsaConfig mustUnderstand="NONE" version="200508" action="CreateCaseID"/>
-        <con:wsrmConfig version="1.2"/>
       </con:call>
     </con:operation>
-    <con:operation id="0245cabf-7e87-4e8b-aa16-081f3c6197e5" isOneWay="false" action="CreateCaseIDFromBPM" name="CreateCaseIDFromBPM" bindingOperationName="CreateCaseIDFromBPM" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+    <con:operation id="f93190ca-7af2-4bae-b623-755dbff1ec3b" isOneWay="false" action="CreateCaseIDFromBPM" name="CreateCaseIDFromBPM" bindingOperationName="CreateCaseIDFromBPM" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
       <con:settings/>
-      <con:call id="40b6f1bc-09ca-4c40-b9d7-876c8b394060" name="Request 1">
+      <con:call id="57769e7d-849f-4a2c-92d5-3a72374c4185" name="Request 1">
         <con:settings/>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>http://localhost:5555/saveDataCase</con:endpoint>
@@ -218,33 +217,44 @@
          <AHV-Nummer>sonoras imperio</AHV-Nummer>\r
          <Dokumenten-Art>quae divum incedo</Dokumenten-Art>\r
          <Geschaeftsfall>verrantque per auras</Geschaeftsfall>\r
+         <Anzahl_der_Dokumente>100</Anzahl_der_Dokumente>\r
       </com:CreateCaseIDRequestFromBPM>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:wsaConfig mustUnderstand="NONE" version="200508" action="CreateCaseIDFromBPM"/>
       </con:call>
     </con:operation>
-    <con:operation id="bf1a906b-0c90-4455-bb60-e4b7759fd150" isOneWay="false" action="GetDataWFCaseID" name="GetDataWFCaseID" bindingOperationName="GetDataWFCaseID" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+    <con:operation id="10ebf33b-7a44-4958-a3c3-59d399f79660" isOneWay="false" action="GetDataWFCaseID" name="GetDataWFCaseID" bindingOperationName="GetDataWFCaseID" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
       <con:settings/>
-      <con:call id="9c2ceae3-4472-4656-9816-3ba25e36bcb7" name="Request 1">
-        <con:settings/>
+      <con:call id="18f405b0-d315-4c19-b0b5-6efc31d031d9" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>http://localhost:5555/saveDataCase</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:com="http://com.tibco.poc.test.bw.saveDataCaseXSD">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <com:GetDataRequestFromCaseID>\r
-         <CaseID>gero et</CaseID>\r
+         <CaseID>1</CaseID>\r
       </com:GetDataRequestFromCaseID>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
         <con:wsaConfig mustUnderstand="NONE" version="200508" action="GetDataWFCaseID"/>
+        <con:wsrmConfig version="1.2"/>
       </con:call>
     </con:operation>
-    <con:operation id="7d5acd7c-2158-4f19-88e7-f95d4a43d4f1" isOneWay="false" action="SearchData" name="SearchData" bindingOperationName="SearchData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+    <con:operation id="efc451c1-dddd-4a76-930c-0ccee6fc7fee" isOneWay="false" action="SearchData" name="SearchData" bindingOperationName="SearchData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
       <con:settings/>
-      <con:call id="a9f8e3ae-ccbd-4eeb-97b1-76da8d61cf1d" name="Request 1">
-        <con:settings/>
+      <con:call id="2b0baa49-463c-41b8-bd4d-6c8ab8eda654" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>http://localhost:5555/saveDataCase</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:com="http://com.tibco.poc.test.bw.saveDataCaseXSD">\r
@@ -257,7 +267,13 @@
       </com:SearchDataRequest>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
         <con:wsaConfig mustUnderstand="NONE" version="200508" action="SearchData"/>
+        <con:wsrmConfig version="1.2"/>
       </con:call>
     </con:operation>
   </con:interface>
